@@ -12,9 +12,9 @@ class BmiService {
     func calculateBMI(height : Double , weight: Double , unit: String) -> Double {
         
         var bmi : Double = 0
-        let height = height / 100
         
         if unit == "kg,cm" {
+            let height = height / 100
             bmi = weight / pow(height, 2)
         } else if unit == "inch,lb" {
             bmi = (weight / pow(height, 2)) * 703
