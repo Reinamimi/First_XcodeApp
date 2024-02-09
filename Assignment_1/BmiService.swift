@@ -16,6 +16,8 @@ class BmiService {
         
         if unit == "kg,cm" {
             bmi = weight / pow(height, 2)
+        } else if unit == "inch,lb" {
+            bmi = (weight / pow(height, 2)) * 703
         }
         
         return bmi
